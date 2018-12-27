@@ -1,11 +1,8 @@
 <template>
-  <div class="home" @click="updateLetter">{{letter}}</div>
+  <div v-touch:longtap="longtapHandler" class="home" @click="updateLetter">{{letter}}</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
-
 export default {
   name: 'home',
   data() {
@@ -26,6 +23,9 @@ export default {
     },
     getRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max));
+    },
+    longtapHandler() {
+      this.$router.push({name:'config'});
     },
   },
   computed: {
