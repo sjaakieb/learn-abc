@@ -7,32 +7,28 @@ export default new Vuex.Store({
   state: {
     level: 1,
     capitals: false,
-    words: false,
+  },
+  getters: {
+    level: state => state.level,
+    capitals: state => state.capitals,
+    words: state => state.words,
   },
   mutations: {
     levelUp(state) {
-      // mutate state
-      state.level++;
+      if (state.level < 7) {
+        state.level++;
+      }
     },
     levelDown(state) {
-      // mutate state
-      state.level--;
+      if (state.level > 0) {
+        state.level--;
+      }
     },
     enableCapitals(state) {
-      // mutate state
       state.capitals = true;
     },
     disableCapitals(state) {
-      // mutate state
       state.capitals = false;
-    },
-    enableWords(state) {
-      // mutate state
-      state.words = true;
-    },
-    disableWords(state) {
-      // mutate state
-      state.words = false;
     },
   },
   actions: {
