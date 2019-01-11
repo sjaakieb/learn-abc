@@ -78,6 +78,7 @@ export default {
   background-color: yellow;
   line-height: 100vh;
   text-align: center;
+  user-select: none;
   &.letter-size-1 {
     font-size: 60vh;
     color:black;
