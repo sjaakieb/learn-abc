@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.dcc0c0a969127743861d90f0cb3c07f6.js"
+  "/precache-manifest.7cafa1102b71312eac9f87e00dfcb46c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "learn-abc"});
