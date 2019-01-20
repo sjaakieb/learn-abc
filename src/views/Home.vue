@@ -44,7 +44,7 @@ export default {
       }
       return this.letters[this.random];
     },
-    numberOfLetters() {
+    numberOfOptions() {
       if (this.capitals) {
         return this.letters.length * 2;
       }
@@ -58,7 +58,7 @@ export default {
     updateLetter() {
       let a;
       do {
-        a = this.getRandomInt(this.numberOfLetters);
+        a = this.getRandomInt(this.numberOfOptions);
       } while (a === this.random);
       this.random = a;
     },

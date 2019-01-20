@@ -7,11 +7,27 @@
       <label>Level: {{ level }}</label>
     </div>
     <div class="button-group">
+      <button @click="levelDown">
+        -
+      </button>
       <button @click="levelUp">
         +
       </button>
-      <button @click="levelDown">
-        -
+    </div>
+    <div
+      class="property"
+    >
+      <label>
+        Fonts:
+        <span v-if="fonts">
+          Multiple
+        </span>
+        <span v-else>
+          Single
+        </span>
+      </label>
+      <button @click="toggleFonts">
+        +
       </button>
     </div>
     <div class="button-group">
@@ -30,12 +46,14 @@ export default {
     ...mapGetters([
       'level',
       'capitals',
+      'fonts',
     ]),
   },
   methods: {
     ...mapMutations([
       'levelUp',
       'levelDown',
+      'toggleFonts',
     ]),
     start() {
       this.$router.push({ name: 'home' });
